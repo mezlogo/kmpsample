@@ -1,11 +1,11 @@
-import * as betslipCommonRoot from "betslipcommon"
+const betslipCommonRoot = require('betslipcommon');
 
-console.log(betslipCommonRoot)
+const betslipcommon = betslipCommonRoot.betslipcommon;
 
-const betslipCommon = betslipCommonRoot.betslipcommon;
+console.log(betslipcommon);
 
-const myTsCallback = { onCall: function(inputMsg: string) { return `callback from TS. inputMsg: ${inputMsg}`; }};
-const response = betslipCommon.commonCode(myTsCallback);
+const myTsCallback = { onCall: (inputMsg: string) => `callback from TS. inputMsg: ${inputMsg}` };
+const response = betslipcommon.commonCode(myTsCallback);
 
 console.log(response);
 console.log(response.toString());

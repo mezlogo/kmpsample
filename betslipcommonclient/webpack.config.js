@@ -4,19 +4,18 @@ module.exports = {
   entry: './src/main.ts',
   module: {
     rules: [
-      {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
+      { test: /\.ts$/, use: 'ts-loader', exclude: /node_modules/ },
     ],
   },
+
+  mode: 'development',
+
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: [ '.ts', '.js' ],
   },
+
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
-  mode: 'development'
 };
