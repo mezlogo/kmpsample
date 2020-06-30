@@ -1,32 +1,37 @@
 plugins {
-    kotlin("multiplatform") version "1.4-M1"
+    kotlin("multiplatform") version "1.4-M2"
 }
 repositories {
     mavenCentral()
-    maven ("https://dl.bintray.com/kotlin/kotlin-eap")
-    maven ("https://kotlin.bintray.com/kotlinx")
+    maven("https://dl.bintray.com/kotlin/kotlin-eap")
+    maven("https://kotlin.bintray.com/kotlinx")
 }
 
-version = "2.1.2"
+group = "mezlogo"
+version = "0.1.2"
 
 kotlin {
-    js {
-        browser()
-        produceExecutable()
+    js(IR) {
+        nodejs()
+        binaries.executable()
     }
-    jvm()
+    jvm {
+        compilations.all {
+            kotlinOptions.jvmTarget = "1.8"
+        }
+    }
     sourceSets {
         val commonMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-common"))
             }
         }
-        jvm().compilations["main"].defaultSourceSet {
+        val jvmMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-jdk8"))
             }
         }
-        js().compilations["main"].defaultSourceSet {
+        val jsMain by getting {
             dependencies {
                 implementation(kotlin("stdlib-js"))
             }
