@@ -1,0 +1,20 @@
+{
+  "main": "kotlin/betslipcommon.js",
+  "devDependencies": {
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11",
+    "source-map-loader": "0.2.4",
+    "webpack-dev-server": "3.10.3",
+    "css-loader": "3.4.2",
+    "style-loader": "1.1.3"
+  },
+  "dependencies": {
+    "kotlin": "file:/tmp/kmpsample/betslipcommon/build/js/packages_imported/kotlin/1.4.0-M2",
+    "kotlin-source-map-loader": "file:/tmp/kmpsample/betslipcommon/build/js/packages_imported/kotlin-source-map-loader/1.4.0-M2"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "name": "betslipcommon",
+  "version": "0.1.2"
+}

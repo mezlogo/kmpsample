@@ -12,7 +12,11 @@ version = "0.1.2"
 
 kotlin {
     js(IR) {
-        nodejs()
+        browser {
+            runTask {
+                output.libraryTarget = org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackOutput.Target.COMMONJS_MODULE
+            }
+        }
         binaries.executable()
     }
     jvm {
