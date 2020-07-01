@@ -14,9 +14,10 @@ kotlin {
     js(IR) {
         browser {
             runTask {
-                output.libraryTarget = org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackOutput.Target.COMMONJS_MODULE
+                output.libraryTarget = org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackOutput.Target.COMMONJS
             }
         }
+        useCommonJs()
         binaries.executable()
     }
     jvm {
