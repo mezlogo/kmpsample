@@ -1,6 +1,4 @@
-const betslipCommonRoot = require('betslipcommon');
-
-const betslipcommon = betslipCommonRoot.betslipcommon;
+import { betslipcommon } from 'betslipcommon';
 
 console.log(betslipcommon);
 
