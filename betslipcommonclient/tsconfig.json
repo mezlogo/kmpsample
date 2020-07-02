@@ -6,11 +6,5 @@
     "target": "es6",
     "sourceMap": true,
     "allowJs": true
-  },
-  "files": [
-    "types/betslipcommon.d.ts"
-  ],
-  "exclude": [
-    "node_modules/betslipcommon/kotlin/betslipcommon.d.ts",
-  ]
+  }
 }
